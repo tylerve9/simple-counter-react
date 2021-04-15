@@ -6,7 +6,7 @@ function SecondsCounter(props) {
 		<div className="text-center mt-5">
 			<div className="card shadow">
 				<div className="card-header bg-primary text-white font-weight-bolder">
-					Seconds Counter
+					{props.title}
 				</div>
 				<div className="card-body">
 					<h3 className="card-title">
@@ -22,12 +22,14 @@ function SecondsCounter(props) {
 	);
 }
 
-// SecondsCounter.defaultProps = {
-// 	seconds: 0
-// };
+SecondsCounter.defaultProps = {
+	seconds: 0,
+	title: ""
+};
 
 SecondsCounter.propTypes = {
-	seconds: PropTypes.number
+	seconds: PropTypes.number,
+	title: PropTypes.string
 };
 
 export default SecondsCounter;
